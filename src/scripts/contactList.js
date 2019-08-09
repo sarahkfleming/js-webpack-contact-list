@@ -10,14 +10,16 @@ const contactList = {
     }
 }
 
-const callingAPI =
-API.getContacts()
-    .then(contacts => {
-        contacts.forEach(contact => {
-            const HTMLVersion = createContactHTML.contactPersonHTML(contact)
-            contactList.displayContactsInDom(HTMLVersion)
+const callingAPI = () => {
+    contactContainer.innerHTML = ""
+    API.getContacts()
+        .then(contacts => {
+            contacts.forEach(contact => {
+                const HTMLVersion = createContactHTML.contactPersonHTML(contact)
+                contactList.displayContactsInDom(HTMLVersion)
+            })
         })
-    })
+}
 
 // Import into Main
 export default callingAPI
