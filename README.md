@@ -7,3 +7,4 @@
 1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
 1. From your command line, be in the main project directory and run `npm install`.
 1. To start your application, run `npm start`.
+# js-webpack-contact-list
